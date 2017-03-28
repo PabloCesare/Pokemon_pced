@@ -1,0 +1,36 @@
+<h2>VER POKEMONES</h2>
+
+
+<div>Buscar por Nombre: <input class="form-control" style="width:200px"  ng-model="buscar.name" type="text" >
+
+ 
+  <td>Elige tipo de pokemón</td>
+ <select id=tipo class="form-control"  style="width:300px" 
+           ng-model="listaTipo.type" 
+			ng-options="poke.url.split('/')[6] as poket.name for poket in tipopokemon | orderBy:'name'"
+			ng-change="listadoTipos(buscar.poket)">
+           required>
+           	<option value="">--Elige opción--</option>
+           </select> 
+ </div> 
+ 
+	<div id="verPokemon">
+		<table class="table table-hover"
+			<thead>
+				<tr>
+				<th>Id</th>
+				<th>Nombre</th>
+				<th>Detalle</th>
+				</tr>
+				<tr ng-repeat="poke in pokemones | filter:buscar | orderBy:'name'">
+					<td>{{$index + 1}}</td>
+					<td>{{poke.name}}</td>			
+					
+					<td><a href="#/detallepk/{{ poke.url.split('/')[6] }}">Ver detalle</a> </td>
+				</tr>
+
+			</thead>
+			<tbody>
+		</table>
+	</div>
+ 

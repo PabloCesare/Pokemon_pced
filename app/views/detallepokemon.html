@@ -1,0 +1,43 @@
+<h2>Detalle Pokemón</h2>
+<div ng-repeat="pokemon in datos">
+	<table class="table table-hover">
+		<th>Tipo</th>
+		<th>Habilidades</th>
+		
+	</table>
+</div>
+
+
+<h3><font color=blue><b>DETALLE</b></font></h3>
+<body >
+<table class="table" border="0"  >
+
+<thead>  
+<tr>  
+<td></td>
+<td></td>
+</tr>  
+<tr>
+<td><b>Nombre de Pokemón :</b></td>
+<td>{{detalle.name}}</td>
+</tr>
+
+<tr>
+<td><b>Peso:</b></td>
+<td>{{detalle.weight}}</td>
+</tr> 
+<tr>
+<td><b>Altura:</b></td>
+<td>{{detalle.height}}</td>   
+</tr>
+
+<tr>   
+<td><b>Foto:</b></td>
+<td> <img src="{{detalle.sprites.front_default}}"></td>
+</tr>
+
+</thead>
+<tbody>
+
+</table>
+</body> 

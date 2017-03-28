@@ -1,0 +1,22 @@
+<h1>Listado de P</h1>
+
+<div>Buscar: </div> <input ng-model="buscar" type="text" >
+
+<table 
+class="table table-hover">
+	<thead>
+		<tr>
+		<td>Id</td>
+		<td>Nombre</td>
+		</tr>
+		<tr ng-repeat="poke in pokemones | filter:buscar | orderBy:'name'">
+			<td>{{$index + 1}}</td>
+			<td>{{poke.name}}</td>
+		</tr>
+	</thead>
+	<tbody>
+
+</table>
+
+
+	  
